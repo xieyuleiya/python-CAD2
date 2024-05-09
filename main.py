@@ -1,7 +1,16 @@
+"""
+by leilei
+备注：
+"""
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import win32com.client
 
+# 连接到AutoCAD应用程序
+cad = win32com.client.Dispatch("AutoCAD.Application")
 
+doc = cad.ActiveDocument
+
+doc.Utility.Prompt("hello")
+
+print(doc.Name)
 
