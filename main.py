@@ -1,6 +1,6 @@
 """
 by leilei
-备注：
+
 """
 
 import win32com.client
@@ -13,4 +13,5 @@ doc = cad.ActiveDocument
 doc.Utility.Prompt("hello")
 
 print(doc.Name)
+
 
